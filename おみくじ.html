@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">おみくじパーク</title>
+</head>
+    <style type="text/css">
+        .midonly{
+        text-align: center;
+        height: 30px;
+        width: 200px;        
+        }
+        .finalonly{
+        text-align: center;
+        height: 30px;
+        width: 200px;        
+        }
+        .both{
+        text-align: center;
+        height: 30px;
+        width: 250px;        
+        }
+        .omikuji{
+            font-size: 200%;
+            text-align: center;
+            color: red;
+            background-color: lawngreen;
+        }
+        body{
+            background-color: aqua;
+            text-align: center;
+        }       
+        .omikujinumber{
+            text-align: center;
+            height: 20px;
+            width: 150px;
+        }
+        .omikujibutton3{
+            text-align: center;
+            height: 30px;
+            width: 130px;
+        }
+        .omikujipark{
+            text-align: center;
+            font-size: 270%;
+            height: 80px;
+            width: 200px;
+            background-color: white;
+            color: black;
+        }
+        .omikujibutton4{
+            text-align: center;
+            height: 30px;
+            width: 180px;
+        }
+        .omikujicautiontitle{
+            text-align: center;
+            font-size: 150%;
+        }
+        .omikujicautionmain{
+            text-align: start;
+        }
+    </style>
+ <script type="text/javascript">
+    function midtermexam(){
+    var mid =Math.round(100*Math.random());
+    alert("中間試験："+mid+"/100")
+    if(mid<55){alert("中間試験：F");
+    }else if(mid<60&mid>=55){alert("中間試験：D");
+    }else if(mid<70&mid>=60){alert("中間試験：C");
+    }else if(mid<80&mid>=70){alert("中間試験：B");
+    }else if(mid<90&mid>=80){alert("中間試験：A");
+    }else{alert("中間試験：A+");
+    }
+    alert("期末試験：0/100")
+    alert("期末試験：F")
+    alert("平常点：100/100")
+    var roulette=Math.round(0.3*mid+40);
+    alert("総合成績："+roulette+"/100")
+    if(roulette<55){alert("総合成績：F");
+    }else if(roulette<60&roulette>=55){alert("総合成績：D");
+    }else if(roulette<70&roulette>=60){alert("総合成績：C");
+    }else if(roulette<80&roulette>=70){alert("総合成績：B");
+    }else if(roulette<90&roulette>=80){alert("総合成績：A");
+    }else{alert("総合成績：A+");
+    }}     
+    function finalexam(){
+    alert("中間試験：0/100");    
+    alert("中間試験：F");
+    var final =Math.round(100*Math.random());
+    alert("期末試験："+final+"/100");
+    if(final<55){alert("期末試験：F");
+    }else if(final<60&final>=55){alert("期末試験：D");
+    }else if(final<70&final>=60){alert("期末試験：C");
+    }else if(final<80&final>=70){alert("期末試験：B");
+    }else if(final<90&final>=80){alert("期末試験：A");
+    }else{alert("期末試験：A+");
+    }
+    alert("平常点：100/100");
+    var roulette=Math.round(0.3*final+40);
+    alert("総合成績："+roulette+"/100");
+    if(roulette<55){alert("総合成績：F");
+    }else if(roulette<60&roulette>=55){alert("総合成績：D");
+    }else if(roulette<70&roulette>=60){alert("総合成績：C");
+    }else if(roulette<80&roulette>=70){alert("総合成績：B");
+    }else if(roulette<90&roulette>=80){alert("総合成績：A");
+    }else{alert("総合成績：A+");
+    }}        
+    function Saikoro(){
+    var mid =Math.round(100*Math.random());
+    alert("中間試験："+mid+"/100");
+    if(mid<55){alert("中間試験：F");
+    }else if(mid<60&mid>=55){alert("中間試験：D");
+    }else if(mid<70&mid>=60){alert("中間試験：C");
+    }else if(mid<80&mid>=70){alert("中間試験：B");
+    }else if(mid<90&mid>=80){alert("中間試験：A");
+    }else{alert("中間試験：A+");
+    }    
+    var final =Math.round(100*Math.random());
+    alert("期末試験："+final+"/100");         
+    if(final<55){alert("期末試験：F");
+    }else if(final<60&final>=55){alert("期末試験：D");
+    }else if(final<70&final>=60){alert("期末試験：C");
+    }else if(final<80&final>=70){alert("期末試験：B");
+    }else if(final<90&final>=80){alert("期末試験：A");
+    }else{alert("期末試験：A+");
+    }    
+    alert("平常点：100/100");
+    var roulette =Math.round(mid*0.3+final*0.3+40);
+    alert("総合成績："+roulette+"/100");
+    if(roulette<55){alert("総合成績：F");
+    }else if(roulette<60&roulette>=55){alert("総合成績：D");
+    }else if(roulette<70&roulette>=60){alert("総合成績：C");
+    }else if(roulette<80&roulette>=70){alert("総合成績：B");
+    }else if(roulette<90&roulette>=80){alert("総合成績：A");
+    }else{alert("総合成績：A+");
+    }}
+
+    function midtermexam2(){
+    var midold =Math.round(100*Math.random());
+    alert("中間試験："+midold+"/100")
+    var mid=Math.round((midold**0.5)*10)
+    alert("おっと、中間試験で得点調整が入ったようだ！")
+    alert("中間試験（得点調整後）："+mid+"/100")
+    if(mid<55){alert("中間試験：F");
+    }else if(mid<60&mid>=55){alert("中間試験：D");
+    }else if(mid<70&mid>=60){alert("中間試験：C");
+    }else if(mid<80&mid>=70){alert("中間試験：B");
+    }else if(mid<90&mid>=80){alert("中間試験：A");
+    }else{alert("中間試験：A+");
+    }
+    alert("期末試験：0/100")
+    alert("おっと、期末試験でも得点調整が入ったようだ！")    
+    alert("期末試験（得点調整後）：0/100")    
+    alert("期末試験：F")
+    var normal=Math.round(((100*Math.random())**0.25)*(10**1.5))
+    alert("平常点："+normal+"/100");
+    if(normal<55){alert("平常点：F");
+    }else if(normal<60&normal>=55){alert("平常点：D");
+    }else if(normal<70&normal>=60){alert("平常点：C");
+    }else if(normal<80&normal>=70){alert("平常点：B");
+    }else if(normal<90&normal>=80){alert("平常点：A");
+    }else{alert("平常点：A+");
+    }    
+    var roulette =Math.round(mid*0.45+normal*0.1);
+    alert("総合成績："+roulette+"/100")
+    if(roulette<55){alert("総合成績：F");
+    }else if(roulette<60&roulette>=55){alert("総合成績：D");
+    }else if(roulette<70&roulette>=60){alert("総合成績：C");
+    }else if(roulette<80&roulette>=70){alert("総合成績：B");
+    }else if(roulette<90&roulette>=80){alert("総合成績：A");
+    }else{alert("総合成績：A+");
+    }}     
+    function finalexam2(){
+    alert("中間試験：0/100");    
+    alert("おっと、中間試験で得点調整が入ったようだ！");
+    alert("中間試験（得点調整後）：0/100");
+    alert("中間試験：F");        
+    var finalold =Math.round(100*Math.random());
+    alert("期末試験："+finalold+"/100")
+    if(finalold==0){var final=0;
+    } else{var final=Math.round(2/((1.5/100)+(0.5/finalold)));
+    }
+    alert("おっと、期末試験でも得点調整が入ったようだ！")
+    alert("期末試験（得点調整後）："+final+"/100")
+    if(final<55){alert("期末試験：F");
+    }else if(final<60&final>=55){alert("期末試験：D");
+    }else if(final<70&final>=60){alert("期末試験：C");
+    }else if(final<80&final>=70){alert("期末試験：B");
+    }else if(final<90&final>=80){alert("期末試験：A");
+    }else{alert("期末試験：A+");
+    }
+    var normal=Math.round(((100*Math.random())**0.25)*(10**1.5))
+    alert("平常点："+normal+"/100");
+    if(normal<55){alert("平常点：F");
+    }else if(normal<60&normal>=55){alert("平常点：D");
+    }else if(normal<70&normal>=60){alert("平常点：C");
+    }else if(normal<80&normal>=70){alert("平常点：B");
+    }else if(normal<90&normal>=80){alert("平常点：A");
+    }else{alert("平常点：A+");
+    }    
+    var roulette =Math.round(final*0.45+normal*0.1);
+    alert("総合成績："+roulette+"/100");
+    if(roulette<55){alert("総合成績：F");
+    }else if(roulette<60&roulette>=55){alert("総合成績：D");
+    }else if(roulette<70&roulette>=60){alert("総合成績：C");
+    }else if(roulette<80&roulette>=70){alert("総合成績：B");
+    }else if(roulette<90&roulette>=80){alert("総合成績：A");
+    }else{alert("総合成績：A+");
+    }}        
+    function Saikoro2(){
+    var midold =Math.round(100*Math.random());
+    alert("中間試験："+midold+"/100")
+    var mid=Math.round((midold**0.5)*10)
+    alert("おっと、中間試験で得点調整が入ったようだ！")
+    alert("中間試験（得点調整後）："+mid+"/100")
+    if(mid<55){alert("中間試験：F");
+    }else if(mid<60&mid>=55){alert("中間試験：D");
+    }else if(mid<70&mid>=60){alert("中間試験：C");
+    }else if(mid<80&mid>=70){alert("中間試験：B");
+    }else if(mid<90&mid>=80){alert("中間試験：A");
+    }else{alert("中間試験：A+");
+    }    
+    const finalold =Math.round(100*Math.random());
+    alert("期末試験："+finalold+"/100")
+    if(finalold==0){var final=0;
+    } else{var final=Math.round(2/((1.5/100)+(0.5/finalold)));
+    }
+    alert("おっと、期末試験でも得点調整が入ったようだ！")
+    alert("期末試験（得点調整後）："+final+"/100")      
+    if(final<55){alert("期末試験：F");
+    }else if(final<60&final>=55){alert("期末試験：D");
+    }else if(final<70&final>=60){alert("期末試験：C");
+    }else if(final<80&final>=70){alert("期末試験：B");
+    }else if(final<90&final>=80){alert("期末試験：A");
+    }else{alert("期末試験：A+");
+    }    
+    var normal=Math.round(((100*Math.random())**0.25)*(10**1.5))
+    alert("平常点："+normal+"/100");
+    if(normal<55){alert("平常点：F");
+    }else if(normal<60&normal>=55){alert("平常点：D");
+    }else if(normal<70&normal>=60){alert("平常点：C");
+    }else if(normal<80&normal>=70){alert("平常点：B");
+    }else if(normal<90&normal>=80){alert("平常点：A");
+    }else{alert("平常点：A+");
+    }    
+    var roulette =Math.round(mid*0.45+final*0.45+normal*0.1);
+    alert("総合成績："+roulette+"/100");
+    if(roulette<55){alert("総合成績：F");
+    }else if(roulette<60&roulette>=55){alert("総合成績：D");
+    }else if(roulette<70&roulette>=60){alert("総合成績：C");
+    }else if(roulette<80&roulette>=70){alert("総合成績：B");
+    }else if(roulette<90&roulette>=80){alert("総合成績：A");
+    }else{alert("総合成績：A+");
+    }}
+
+
+    function realomikuji(){ 
+    var form= document.getElementById("normalomikuji3").value          
+    if(form==""){
+        alert("数字を入力してね(>_<)")
+    }else{
+        var formchange31=form.replace(/＼/g,'/')                     
+        var formchange0= formchange31.replace( /[！-～]/g, function(s) {
+        return String.fromCharCode(s.charCodeAt(0) - 65248);
+        });
+        var formchange1=formchange0.replace(/π/g,'Math.PI')
+        var formchange2=formchange1.replace(/e/g,'E')    
+        var formchange3a=formchange2.replace('^','**');        
+        var formchange3b=formchange3a.replace('^','**');        
+        var formchange3c=formchange3b.replace('^','**');        
+        var formchange3d=formchange3c.replace('^','**');        
+        var formchange3e=formchange3d.replace('^','**');        
+        var formchange3f=formchange3e.replace('^','**');        
+        var formchange3g=formchange3f.replace('^','**');        
+        var formchange3h=formchange3g.replace('^','**');        
+        var formchange3i=formchange3h.replace('^','**');        
+        var formchange3j=formchange3i.replace('^','**');        
+        var formchange3k=formchange3j.replace('^','**');        
+        var formchange3l=formchange3k.replace('^','**');        
+        var formchange3m=formchange3l.replace('^','**');        
+        var formchange3n=formchange3m.replace('^','**');        
+        var formchange3o=formchange3n.replace('^','**');        
+        var formchange3p=formchange3o.replace('^','**');        
+        var formchange3q=formchange3p.replace('^','**');        
+        var formchange3r=formchange3q.replace('^','**');        
+        var formchange3s=formchange3r.replace('^','**');        
+        var formchange3t=formchange3s.replace('^','**');        
+        var formchange3u=formchange3t.replace('^','**');        
+        var formchange3v=formchange3u.replace('^','**');        
+        var formchange3w=formchange3v.replace('^','**');        
+        var formchange3x=formchange3w.replace('^','**');        
+        var formchange3y=formchange3x.replace('^','**');        
+        var formchange3z=formchange3y.replace('^','**');        
+        var formchange4=formchange3z.replace(/＾/g,'**')            
+        var formchange5=formchange4.replace(/τ/g,'(2*Math.PI)')                
+        var formchange6=formchange5.replace(/×/g,'*')                
+        var formchange7=formchange6.replace(/・/g,'*')      
+        var formchange8=formchange7.replace(/÷/g,'/')              
+        var formchange9=formchange8.replace(/＊/g,'*')                            
+        var formchange10=formchange9.replace(/⁺/g,'+')                        
+        var formchange11=formchange10.replace(/ー/g,'-')                
+        var formchange12=formchange11.replace(/－/g,'-')                          
+        var formchange13=formchange12.replace(/₋/g,'-')                           
+        var formchange14=formchange13.replace(/⁻/g,'-')                    
+        var formchange15=formchange14.replace(/‐/g,'-')                    
+        var formchange16=formchange15.replace(/―/g,'-')                 
+        var formchange17a=formchange16.replace(/₊/g,'+')                 
+        var formchange17b=formchange17a.replace(/∔/g,'+')                         
+        var formchange18=formchange17b.replace(/−/g,'-')                              
+        var formchange19=formchange18.replace(/Π/g,'Math.PI')                            
+        var formchange20=formchange19.replace(/ｅ/g,'E')   
+        var formchange21=formchange20.replace(/℮/g,'E')                       
+        var formchange22=formchange21.replace(/E/g,'Math.E')                   
+        var formchange23=formchange22.replace(/Ｅ/g,'Math.E')           
+        var formchange24=formchange23.replace(/Τ/g,'(2*Math.PI)')                                        
+        var formchange25=formchange24.replace(/,/g,'.')                                             
+        var formchange26=formchange25.replace(/，/g,'.')                                
+        var formchange27=formchange26.replace(/,/g,'.')                
+        var formchange28=formchange27.replace(/、/g,'.')                       
+        var formchange29=formchange28.replace(/。/g,'.')                   
+        var formchange30=formchange29.replace(/／/g,'/')                                                                   
+        var formchange32=formchange30.replace(/✖/g,'*')                      
+        var formchange33=formchange32.replace(/✕/g,'*')                   
+        var formchange46=formchange33.replace(/arcsinH/g,'Math.asinh')                 
+        var formchange47=formchange46.replace(/arccosH/g,'Math.acosh')               
+        var formchange48=formchange47.replace(/arctanH/g,'Math.atanh')                  
+        var formchange43=formchange48.replace(/sinH/g,'Math.sinh')                 
+        var formchange44=formchange43.replace(/cosH/g,'Math.cosh')               
+        var formchange45=formchange44.replace(/tanH/g,'Math.tanh')               
+        var formchange34=formchange45.replace(/Sin/g,'Math.sin')                            
+        var formchange35=formchange34.replace(/Cos/g,'Math.cos')                   
+        var formchange36=formchange35.replace(/Tan/g,'Math.tan')                   
+        var formchange37=formchange36.replace(/Arcsin/g,'Math.asin')                   
+        var formchange38=formchange37.replace(/Arccos/g,'Math.acos')              
+        var formchange39=formchange38.replace(/Arctan/g,'Math.atan')                  
+        var formchange40a=formchange39.replace(/ln/g,'Math.log')                
+        var formchange40b=formchange40a.replace(/Ln/g,'Math.log')                        
+        var formchange41a=formchange40b.replace(/log10/g,'Math.log10')            
+        var formchange41b=formchange41a.replace(/Log10/g,'Math.log10')                    
+        var formchange42a=formchange41b.replace(/log2/g,'Math.log2')                           
+        var formchange42b=formchange42a.replace(/Log2/g,'Math.log2')                 
+        var formchange49a=formchange42b.replace(/✙/g,'+')                               
+        var formchange49b=formchange49a.replace(/∔/g,'+')                
+        var formchange49c=formchange49b.replace(/➕/g,'+')                           
+        var formchange50=formchange49c.replace(/➖/g,'-')                   
+        var formchange51=formchange50.replace(/➗/g,'/')                 
+        var formchange52=formchange51.replace(/✢|✤|✥|✱|✣|✲|✳|✴|✶|✷|✹|✺|✵|✻|✽|❇|❃|❉|❊|❋|❈/g,'*')                         
+        var formchange53a=formchange52.replace(/{/g,'(')                  
+        var formchange53b=formchange53a.replace(/｛/g,'(')                          
+        var formchange53c=formchange53b.replace(/}/g,')')                  
+        var formchange53d=formchange53c.replace(/｝/g,')')             
+        var formchange54a1=formchange53d.replace('[','(')                  
+        var formchange54a2=formchange54a1.replace('[','(')               
+        var formchange54a3=formchange54a2.replace('[','(')               
+        var formchange54a4=formchange54a3.replace('[','(')               
+        var formchange54a5=formchange54a4.replace('[','(')               
+        var formchange54a6=formchange54a5.replace('[','(')               
+        var formchange54a7=formchange54a6.replace('[','(')               
+        var formchange54a8=formchange54a7.replace('[','(')               
+        var formchange54a9=formchange54a8.replace('[','(')                       
+        var formchange54b1=formchange54a9.replace('［','(')                 
+        var formchange54b2=formchange54b1.replace('［','(')           
+        var formchange54b3=formchange54b2.replace('［','(')           
+        var formchange54b4=formchange54b3.replace('［','(')           
+        var formchange54b5=formchange54b4.replace('［','(')           
+        var formchange54b6=formchange54b5.replace('［','(')           
+        var formchange54b7=formchange54b6.replace('［','(')           
+        var formchange54b8=formchange54b7.replace('［','(')           
+        var formchange54b9=formchange54b8.replace('［','(')           
+        var formchange54c=formchange54b9.replace(/]/g,')')                  
+        var formchange54d=formchange54c.replace(/］/g,')')                       
+        var formchange55a=formchange54d.replace(/〔|【|⁅|〖|〘|〚|（|₍|⁽/g,'(')                 
+        var formchange55b=formchange55a.replace(/〕|】|⁆|〗|〙|〛|⁾|）|₎/g,')')                         
+    var number=eval(formchange55b);
+    if(number>=0)
+        {var kuji=(Math.round(number*7*Math.random()+7*Math.random()))%7
+        }else{var kuji=(6-((-Math.round(number*7*Math.random()+7*Math.random())))%7)%7
+        }
+        if(number>=0)
+        {var rankup=(Math.round(number*6*Math.random()+6*Math.random()))%6
+        }else{var rankup=(5-((-Math.round(number*6*Math.random()+6*Math.random())))%6)%6
+        }       
+        if(kuji==0){alert("大吉");
+        }else if(kuji==1){if(rankup<3){alert("吉")
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！1ランクアップだ！！");
+        alert("大吉");
+        }else if(rankup==3){
+            alert("吉")
+            alert("おっと、ランクアップするかも！");
+            alert("申し訳ない…。ランクアップはしなかったようだ…");
+            alert("吉");
+        }else{alert("吉")
+        }
+        }else if(kuji==2){if(rankup<2){alert("中吉")
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！1ランクアップだ！！");
+        alert("吉");
+        }else if(rankup==2){alert("中吉");
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！2ランクアップだ！！");
+        alert("大吉");
+        }else if(rankup==3){
+            alert("中吉");
+            alert("おっと、ランクアップするかも！");
+            alert("申し訳ない…。ランクアップはしなかったようだ…");
+            alert("中吉");
+        }else{alert("中吉");
+        }
+        }else if(kuji==3){if(rankup<2){alert("小吉")
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！1ランクアップだ！！");
+        alert("中吉");
+        }else if(rankup==2){alert("小吉");
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！2ランクアップだ！！");
+        alert("吉");
+        }else if(rankup==3){
+            alert("小吉");
+            alert("おっと、ランクアップするかも！");
+            alert("申し訳ない…。ランクアップはしなかったようだ…");
+            alert("小吉");
+        }else{alert("小吉");
+        }
+        }else if(kuji==4){if(rankup<2){alert("末吉")
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！1ランクアップだ！！");
+        alert("小吉");
+        }else if(rankup==2){alert("末吉");
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！2ランクアップだ！！");
+        alert("中吉");
+        }else if(rankup==3){
+            alert("末吉");
+            alert("おっと、ランクアップするかも！");
+            alert("申し訳ない…。ランクアップはしなかったようだ…");
+            alert("末吉");
+        }else{alert("末吉");
+        }
+        }else if(kuji==5){if(rankup<2){alert("凶")
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！1ランクアップだ！！");
+        alert("末吉");
+        }else if(rankup==2){alert("凶");
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！2ランクアップだ！！");
+        alert("小吉");
+        }else if(rankup==3){
+            alert("凶");
+            alert("おっと、ランクアップするかも！");
+            alert("申し訳ない…。ランクアップはしなかったようだ…");
+            alert("凶");
+        }else if(rankup==4){alert("凶");
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！");
+        alert("なんと…");
+        alert("５ランクアップだ！！！");
+        alert("大吉");
+        }else{alert("凶");
+        }
+        }else if(kuji==6){if(rankup<2){alert("大凶")
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！1ランクアップだ！！");
+        alert("凶");
+        }else if(rankup==2){alert("大凶");
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！2ランクアップだ！！");
+        alert("末吉");
+        }else if(rankup==3){
+            alert("大凶");
+            alert("おっと、ランクアップするかも！");
+            alert("申し訳ない…。ランクアップはしなかったようだ…");
+            alert("大凶");
+        }else if(rankup==5){alert("大凶");
+        }else{alert("大凶");
+        alert("おっと、ランクアップするかも！");
+        alert("おめでとう！");
+        alert("なんと…");
+        alert("６ランクアップだ！！！");
+        alert("大吉")}
+    }
+    }
+    }
+
+
+    function omikujiforsocialperson4(){ 
+    var form= document.getElementById("normalomikuji4").value       
+    if(form==""){
+        alert("数字を入力してね(>_<)")
+    }else{
+        var formchange31=form.replace(/＼/g,'/')                     
+        var formchange0= formchange31.replace( /[！-～]/g, function(s) {
+        return String.fromCharCode(s.charCodeAt(0) - 65248);
+        });
+        var formchange1=formchange0.replace(/π/g,'Math.PI')
+        var formchange2=formchange1.replace(/e/g,'E')    
+        var formchange3a=formchange2.replace('^','**');        
+        var formchange3b=formchange3a.replace('^','**');        
+        var formchange3c=formchange3b.replace('^','**');        
+        var formchange3d=formchange3c.replace('^','**');        
+        var formchange3e=formchange3d.replace('^','**');        
+        var formchange3f=formchange3e.replace('^','**');        
+        var formchange3g=formchange3f.replace('^','**');        
+        var formchange3h=formchange3g.replace('^','**');        
+        var formchange3i=formchange3h.replace('^','**');        
+        var formchange3j=formchange3i.replace('^','**');        
+        var formchange3k=formchange3j.replace('^','**');        
+        var formchange3l=formchange3k.replace('^','**');        
+        var formchange3m=formchange3l.replace('^','**');        
+        var formchange3n=formchange3m.replace('^','**');        
+        var formchange3o=formchange3n.replace('^','**');        
+        var formchange3p=formchange3o.replace('^','**');        
+        var formchange3q=formchange3p.replace('^','**');        
+        var formchange3r=formchange3q.replace('^','**');        
+        var formchange3s=formchange3r.replace('^','**');        
+        var formchange3t=formchange3s.replace('^','**');        
+        var formchange3u=formchange3t.replace('^','**');        
+        var formchange3v=formchange3u.replace('^','**');        
+        var formchange3w=formchange3v.replace('^','**');        
+        var formchange3x=formchange3w.replace('^','**');        
+        var formchange3y=formchange3x.replace('^','**');        
+        var formchange3z=formchange3y.replace('^','**');        
+        var formchange4=formchange3z.replace(/＾/g,'**')            
+        var formchange5=formchange4.replace(/τ/g,'(2*Math.PI)')                
+        var formchange6=formchange5.replace(/×/g,'*')                
+        var formchange7=formchange6.replace(/・/g,'*')      
+        var formchange8=formchange7.replace(/÷/g,'/')              
+        var formchange9=formchange8.replace(/＊/g,'*')                            
+        var formchange10=formchange9.replace(/⁺/g,'+')                        
+        var formchange11=formchange10.replace(/ー/g,'-')                
+        var formchange12=formchange11.replace(/－/g,'-')                          
+        var formchange13=formchange12.replace(/₋/g,'-')                           
+        var formchange14=formchange13.replace(/⁻/g,'-')                    
+        var formchange15=formchange14.replace(/‐/g,'-')                    
+        var formchange16=formchange15.replace(/―/g,'-')                 
+        var formchange17a=formchange16.replace(/₊/g,'+')                 
+        var formchange17b=formchange17a.replace(/∔/g,'+')                         
+        var formchange18=formchange17b.replace(/−/g,'-')                              
+        var formchange19=formchange18.replace(/Π/g,'Math.PI')                            
+        var formchange20=formchange19.replace(/ｅ/g,'E')   
+        var formchange21=formchange20.replace(/℮/g,'E')                       
+        var formchange22=formchange21.replace(/E/g,'Math.E')                   
+        var formchange23=formchange22.replace(/Ｅ/g,'Math.E')           
+        var formchange24=formchange23.replace(/Τ/g,'(2*Math.PI)')                                        
+        var formchange25=formchange24.replace(/,/g,'.')                                             
+        var formchange26=formchange25.replace(/，/g,'.')                                
+        var formchange27=formchange26.replace(/,/g,'.')                
+        var formchange28=formchange27.replace(/、/g,'.')                       
+        var formchange29=formchange28.replace(/。/g,'.')                   
+        var formchange30=formchange29.replace(/／/g,'/')                                                                   
+        var formchange32=formchange30.replace(/✖/g,'*')                      
+        var formchange33=formchange32.replace(/✕/g,'*')                   
+        var formchange46=formchange33.replace(/arcsinH/g,'Math.asinh')                 
+        var formchange47=formchange46.replace(/arccosH/g,'Math.acosh')               
+        var formchange48=formchange47.replace(/arctanH/g,'Math.atanh')                  
+        var formchange43=formchange48.replace(/sinH/g,'Math.sinh')                 
+        var formchange44=formchange43.replace(/cosH/g,'Math.cosh')               
+        var formchange45=formchange44.replace(/tanH/g,'Math.tanh')               
+        var formchange34=formchange45.replace(/Sin/g,'Math.sin')                            
+        var formchange35=formchange34.replace(/Cos/g,'Math.cos')                   
+        var formchange36=formchange35.replace(/Tan/g,'Math.tan')                   
+        var formchange37=formchange36.replace(/Arcsin/g,'Math.asin')                   
+        var formchange38=formchange37.replace(/Arccos/g,'Math.acos')              
+        var formchange39=formchange38.replace(/Arctan/g,'Math.atan')                  
+        var formchange40a=formchange39.replace(/ln/g,'Math.log')                
+        var formchange40b=formchange40a.replace(/Ln/g,'Math.log')                        
+        var formchange41a=formchange40b.replace(/log10/g,'Math.log10')            
+        var formchange41b=formchange41a.replace(/Log10/g,'Math.log10')                    
+        var formchange42a=formchange41b.replace(/log2/g,'Math.log2')                           
+        var formchange42b=formchange42a.replace(/Log2/g,'Math.log2')                 
+        var formchange49a=formchange42b.replace(/✙/g,'+')                               
+        var formchange49b=formchange49a.replace(/∔/g,'+')                
+        var formchange49c=formchange49b.replace(/➕/g,'+')                           
+        var formchange50=formchange49c.replace(/➖/g,'-')                   
+        var formchange51=formchange50.replace(/➗/g,'/')                 
+        var formchange52=formchange51.replace(/✢|✤|✥|✱|✣|✲|✳|✴|✶|✷|✹|✺|✵|✻|✽|❇|❃|❉|❊|❋|❈/g,'*')                         
+        var formchange53a=formchange52.replace(/{/g,'(')                  
+        var formchange53b=formchange53a.replace(/｛/g,'(')                          
+        var formchange53c=formchange53b.replace(/}/g,')')                  
+        var formchange53d=formchange53c.replace(/｝/g,')')             
+        var formchange54a1=formchange53d.replace('[','(')                  
+        var formchange54a2=formchange54a1.replace('[','(')               
+        var formchange54a3=formchange54a2.replace('[','(')               
+        var formchange54a4=formchange54a3.replace('[','(')               
+        var formchange54a5=formchange54a4.replace('[','(')               
+        var formchange54a6=formchange54a5.replace('[','(')               
+        var formchange54a7=formchange54a6.replace('[','(')               
+        var formchange54a8=formchange54a7.replace('[','(')               
+        var formchange54a9=formchange54a8.replace('[','(')                       
+        var formchange54b1=formchange54a9.replace('［','(')                 
+        var formchange54b2=formchange54b1.replace('［','(')           
+        var formchange54b3=formchange54b2.replace('［','(')           
+        var formchange54b4=formchange54b3.replace('［','(')           
+        var formchange54b5=formchange54b4.replace('［','(')           
+        var formchange54b6=formchange54b5.replace('［','(')           
+        var formchange54b7=formchange54b6.replace('［','(')           
+        var formchange54b8=formchange54b7.replace('［','(')           
+        var formchange54b9=formchange54b8.replace('［','(')           
+        var formchange54c=formchange54b9.replace(/]/g,')')                  
+        var formchange54d=formchange54c.replace(/］/g,')')                       
+        var formchange55a=formchange54d.replace(/〔|【|⁅|〖|〘|〚|（|₍|⁽/g,'(')                 
+        var formchange55b=formchange55a.replace(/〕|】|⁆|〗|〙|〛|⁾|）|₎/g,')')                         
+    var number=eval(formchange55b);
+        if(number>=0)
+        {var minbefore=((Math.round(number*360*Math.random()+360*Math.random()))%360);
+        }else{var minbefore=((359-((-Math.round(number*360*Math.random()+360*Math.random())))%360)%360);
+        }
+        var minafter = Math.round(360-(360**0.5)*(minbefore**0.5));
+        var minute = minafter%60;
+        var hour = (minafter-minute)/60;
+        if(hour==0){
+        alert("今日の残業時間："+minute+"分");
+        }else{alert("今日の残業時間："+hour+"時間"+minute+"分");
+        }
+    }
+    }    
+
+
+    function omikujiforsocialperson5(){ 
+        var form= document.getElementById("normalomikuji5").value       
+        if(form==""){
+        alert("数字を入力してね(>_<)")
+    }else{
+        var formchange31=form.replace(/＼/g,'/')               
+        var formchange0= formchange31.replace( /[！-～]/g, function(s) {
+        return String.fromCharCode(s.charCodeAt(0) - 65248);
+        });
+        var formchange1=formchange0.replace(/π/g,'Math.PI')
+        var formchange2=formchange1.replace(/e/g,'E')    
+        var formchange3a=formchange2.replace('^','**');        
+        var formchange3b=formchange3a.replace('^','**');        
+        var formchange3c=formchange3b.replace('^','**');        
+        var formchange3d=formchange3c.replace('^','**');        
+        var formchange3e=formchange3d.replace('^','**');        
+        var formchange3f=formchange3e.replace('^','**');        
+        var formchange3g=formchange3f.replace('^','**');        
+        var formchange3h=formchange3g.replace('^','**');        
+        var formchange3i=formchange3h.replace('^','**');        
+        var formchange3j=formchange3i.replace('^','**');        
+        var formchange3k=formchange3j.replace('^','**');        
+        var formchange3l=formchange3k.replace('^','**');        
+        var formchange3m=formchange3l.replace('^','**');        
+        var formchange3n=formchange3m.replace('^','**');        
+        var formchange3o=formchange3n.replace('^','**');        
+        var formchange3p=formchange3o.replace('^','**');        
+        var formchange3q=formchange3p.replace('^','**');        
+        var formchange3r=formchange3q.replace('^','**');        
+        var formchange3s=formchange3r.replace('^','**');        
+        var formchange3t=formchange3s.replace('^','**');        
+        var formchange3u=formchange3t.replace('^','**');        
+        var formchange3v=formchange3u.replace('^','**');        
+        var formchange3w=formchange3v.replace('^','**');        
+        var formchange3x=formchange3w.replace('^','**');        
+        var formchange3y=formchange3x.replace('^','**');        
+        var formchange3z=formchange3y.replace('^','**');        
+        var formchange4=formchange3z.replace(/＾/g,'**')            
+        var formchange5=formchange4.replace(/τ/g,'(2*Math.PI)')                
+        var formchange6=formchange5.replace(/×/g,'*')                
+        var formchange7=formchange6.replace(/・/g,'*')      
+        var formchange8=formchange7.replace(/÷/g,'/')              
+        var formchange9=formchange8.replace(/＊/g,'*')                            
+        var formchange10=formchange9.replace(/⁺/g,'+')                        
+        var formchange11=formchange10.replace(/ー/g,'-')                
+        var formchange12=formchange11.replace(/－/g,'-')                          
+        var formchange13=formchange12.replace(/₋/g,'-')                           
+        var formchange14=formchange13.replace(/⁻/g,'-')                    
+        var formchange15=formchange14.replace(/‐/g,'-')                    
+        var formchange16=formchange15.replace(/―/g,'-')                 
+        var formchange17a=formchange16.replace(/₊/g,'+')                 
+        var formchange17b=formchange17a.replace(/∔/g,'+')                         
+        var formchange18=formchange17b.replace(/−/g,'-')                              
+        var formchange19=formchange18.replace(/Π/g,'Math.PI')                            
+        var formchange20=formchange19.replace(/ｅ/g,'E')   
+        var formchange21=formchange20.replace(/℮/g,'E')                       
+        var formchange22=formchange21.replace(/E/g,'Math.E')                   
+        var formchange23=formchange22.replace(/Ｅ/g,'Math.E')           
+        var formchange24=formchange23.replace(/Τ/g,'(2*Math.PI)')                                        
+        var formchange25=formchange24.replace(/,/g,'.')                                             
+        var formchange26=formchange25.replace(/，/g,'.')                                
+        var formchange27=formchange26.replace(/,/g,'.')                
+        var formchange28=formchange27.replace(/、/g,'.')                       
+        var formchange29=formchange28.replace(/。/g,'.')                   
+        var formchange30=formchange29.replace(/／/g,'/')                                                                   
+        var formchange32=formchange30.replace(/✖/g,'*')                      
+        var formchange33=formchange32.replace(/✕/g,'*')                   
+        var formchange46=formchange33.replace(/arcsinH/g,'Math.asinh')                 
+        var formchange47=formchange46.replace(/arccosH/g,'Math.acosh')               
+        var formchange48=formchange47.replace(/arctanH/g,'Math.atanh')                  
+        var formchange43=formchange48.replace(/sinH/g,'Math.sinh')                 
+        var formchange44=formchange43.replace(/cosH/g,'Math.cosh')               
+        var formchange45=formchange44.replace(/tanH/g,'Math.tanh')               
+        var formchange34=formchange45.replace(/Sin/g,'Math.sin')                            
+        var formchange35=formchange34.replace(/Cos/g,'Math.cos')                   
+        var formchange36=formchange35.replace(/Tan/g,'Math.tan')                   
+        var formchange37=formchange36.replace(/Arcsin/g,'Math.asin')                   
+        var formchange38=formchange37.replace(/Arccos/g,'Math.acos')              
+        var formchange39=formchange38.replace(/Arctan/g,'Math.atan')                  
+        var formchange40a=formchange39.replace(/ln/g,'Math.log')                
+        var formchange40b=formchange40a.replace(/Ln/g,'Math.log')                        
+        var formchange41a=formchange40b.replace(/log10/g,'Math.log10')            
+        var formchange41b=formchange41a.replace(/Log10/g,'Math.log10')                    
+        var formchange42a=formchange41b.replace(/log2/g,'Math.log2')                           
+        var formchange42b=formchange42a.replace(/Log2/g,'Math.log2')                 
+        var formchange49a=formchange42b.replace(/✙/g,'+')                               
+        var formchange49b=formchange49a.replace(/∔/g,'+')                
+        var formchange49c=formchange49b.replace(/➕/g,'+')                           
+        var formchange50=formchange49c.replace(/➖/g,'-')                   
+        var formchange51=formchange50.replace(/➗/g,'/')                 
+        var formchange52=formchange51.replace(/✢|✤|✥|✱|✣|✲|✳|✴|✶|✷|✹|✺|✵|✻|✽|❇|❃|❉|❊|❋|❈/g,'*')                         
+        var formchange53a=formchange52.replace(/{/g,'(')                  
+        var formchange53b=formchange53a.replace(/｛/g,'(')                          
+        var formchange53c=formchange53b.replace(/}/g,')')                  
+        var formchange53d=formchange53c.replace(/｝/g,')')             
+        var formchange54a1=formchange53d.replace('[','(')                  
+        var formchange54a2=formchange54a1.replace('[','(')               
+        var formchange54a3=formchange54a2.replace('[','(')               
+        var formchange54a4=formchange54a3.replace('[','(')               
+        var formchange54a5=formchange54a4.replace('[','(')               
+        var formchange54a6=formchange54a5.replace('[','(')               
+        var formchange54a7=formchange54a6.replace('[','(')               
+        var formchange54a8=formchange54a7.replace('[','(')               
+        var formchange54a9=formchange54a8.replace('[','(')                       
+        var formchange54b1=formchange54a9.replace('［','(')                 
+        var formchange54b2=formchange54b1.replace('［','(')           
+        var formchange54b3=formchange54b2.replace('［','(')           
+        var formchange54b4=formchange54b3.replace('［','(')           
+        var formchange54b5=formchange54b4.replace('［','(')           
+        var formchange54b6=formchange54b5.replace('［','(')           
+        var formchange54b7=formchange54b6.replace('［','(')           
+        var formchange54b8=formchange54b7.replace('［','(')           
+        var formchange54b9=formchange54b8.replace('［','(')           
+        var formchange54c=formchange54b9.replace(/]/g,')')                  
+        var formchange54d=formchange54c.replace(/］/g,')')                       
+        var formchange55a=formchange54d.replace(/〔|【|⁅|〖|〘|〚|（|₍|⁽/g,'(')                 
+        var formchange55b=formchange55a.replace(/〕|】|⁆|〗|〙|〛|⁾|）|₎/g,')')                         
+    var number=eval(formchange55b);
+        if(number>=0)
+        {var wageup1st=((Math.round(number*151*Math.random()+151*Math.random()))%151)-50;
+        }else{var wageup1st=((150-((-Math.round(number*151*Math.random()+151*Math.random())))%151)%151)-50;
+        }
+        if(number>=0)
+        {var wageup2nd=((Math.round(number*151*Math.random()+151*Math.random()))%151)-50;
+        }else{var wageup2nd=((150-((-Math.round(number*151*Math.random()+151*Math.random())))%151)%151)-50;
+        }
+        if(wageup1st>=0){
+        alert("今年の給料：前年＋"+wageup1st+"万円");
+        }else{alert("今年の給料：前年"+wageup1st+"万円");
+        alert("というのは嘘で…")
+        if(wageup2nd>=0){
+            alert("今年の本当の給料：前年＋"+wageup2nd+"万円");
+        }else{alert("今年の本当の給料：前年"+wageup2nd+"万円");
+        }
+        }
+    }
+    }    
+</script>         
+
+<body>
+    <text class="omikujipark">おみくじパーク</text><br>
+    <br>
+    <br>
+    <text class="omikuji">おみくじ⓵</text><br>
+    <text class="additional-title">大学おみくじを用意したよ( ´艸｀)<br>
+        中間試験と期末試験を受けてくれたら（自動受験）<br>その総合成績からおみくじ評価が出るよ( ´∀｀ )<br>
+        おみくじ評価は「A+」「A」「B」「C」「D」「F」だよ( ´艸｀)<br>A+が出たらいいね( ´∀｀ )
+    <br>ちなみに、総合成績は、中間試験×0.3+期末試験×0.3+平常点×0.4だよ( ´∀｀ )</text>
+
+    <p><button onclick="midtermexam()" class="midonly">中間試験だけ受けたい人用</button></p>    
+    <p><button onclick="finalexam()" class="finalonly">期末試験だけ受けたい人用</button></p>    
+    <p><button onclick="Saikoro()" class="both">中間試験も期末試験も両方受ける人用</button></p>
+    <br>
+    <br>
+    <text class="omikuji">おみくじ⓶</text><br>
+    <text class="additional-title">大学おみくじをもう一個用意したよ( ´艸｀)<br>
+        中間試験と期末試験を受けてくれたら（自動受験）<br>その総合成績からおみくじ評価が出るよ( ´∀｀ )<br>
+        おみくじ評価は「A+」「A」「B」「C」「D」「F」だよ( ´艸｀)<br>A+が出たらいいね( ´∀｀ )
+        <br>ちなみに、総合成績は、中間試験×0.45+期末試験×0.45+平常点×0.1だよ( ´∀｀ )</text>
+    <p><button onclick="midtermexam2()" class="midonly">中間試験だけ受けたい人用</button></p>    
+    <p><button onclick="finalexam2()" class="finalonly">期末試験だけ受けたい人用</button></p>    
+    <p><button onclick="Saikoro2()" class="both">中間試験も期末試験も両方受ける人用</button></p>    
+    <br>
+    <br>    
+    <text class="omikuji">おみくじ⓷</text><br>
+    <text class="additional-title">今度は、普通のおみくじを用意したよ( ´∀｀ )<br>
+    空欄に好きな数字(<strong>実数値</strong>)を入力してね(^^)<br>
+    3.14とか2.71とかの<strong>小数</strong>や22/7とかの<strong>分数</strong>でもいいよ( ^^) <br>
+    ネイピア数eや円周率πとかτ（=2π）も使っていいよ(*^_^*)<br>
+    あと、√10（ルート10）とか入力したいときは、<br>（√10は10の0.5乗だから、）10**0.5もしくは、10^0.5って入力してね( ;∀;)<br>
+    三角関数や逆三角関数や双曲線関数や対数関数とかは<br>「今日の運勢を占う」ボタンの下の<u><strong>注意事項通りに</strong></u>打ち込んでね(*'ω'*)<br>
+    （ガウス記号とか虚数とかはやめてね(>_<)<br>あと、（eやπやτはいいけど）それ以外の数字ではない文字もやめてね('Д')）<br>
+    数字を入力して「今日の運勢を占う」ボタンを押してくれたら、<br>
+    「大吉」「吉」「中吉」「小吉」「末吉」「凶」「大凶」のうち<br>どれかがメッセージで返ってくるよm(__)m<br>
+    大吉が出ればいいね!(^^)!<br>
+    <br>
+    <input type="text" class="omikujinumber" id="normalomikuji3">
+    <p><button onclick="realomikuji()" class="omikujibutton3">今日の運勢を占う</button></p>    
+    <br>
+    <text class="omikujicautiontitle">＜注意事項＞</text><br>
+    <text class="omikujicautionmain">
+    ①必ず、関数名の後には<u>()で囲ってね</u>( *´艸｀)<br>
+    ②三角関数については度数法ではなく<u>弧度法で</u>入力してね(*'ω'*)<br>    
+    ③三角関数と逆三角関数は<u>最初の文字だけ大文字に</u>して打ちこんでね('ω')<br>
+    (ex:Sin(Π/2)，Arccos(1))<br>
+    ④双曲線関数や逆双曲線関数は、<br>
+    <strong><u>最初の文字は大文字ではなく小文字にして</u></strong><br>
+    <u>()の直前のHだけ大文字にしてね(>_<)</u><br>
+    (ex:sinH(1)，tanH(2)，arccosH(1)，arctanH(0))<br>
+    ⑤逆三角関数と逆双曲線関数のうち<br>
+    arccot，arcsec，arccsc，aecoth，arsech，arcschについては非対応だよ(>_<)<br>ごめんね(+_+)<br>
+    これらを使いたいときは<u>公式を使って</u>何とかしてね(-_-;)<br>
+    ⑥対数関数については<u>底はeと2と10にしか</u>対応していないよ(-_-;)<br>
+    それ以外の底の対数関数を使いたかったら<u>対数の割り算の公式で変形</u>してね(>_<)<br>
+    ⑦対数関数について、底がeのときは、<strong>Ln()</strong>もしくは<strong>ln()</strong>を使ってね(*^_^*)<br>
+    底が2とか10のときは、<br>log2()とかlog10()、もしくは、Log2()とかlog10()<br>って入力してね(*^_^*)<br>
+    (ex:log2(2)，Log2(3)，log10(5)，Log10(7))
+</text>
+    <br>
+    <br>    
+    <text class="omikuji">おみくじ⓸</text><br>    
+   <text class="additional-title">社会人のためのおみくじを用意したよ( ´∀｀ )<br>
+    空欄の数字(<strong>実数値</strong>)の入力の仕方はおみくじ⓷と一緒だよ(^^)<br>
+    空欄に数字（<strong>実数値</strong>）を入力して「今日の残業時間を占う」ボタンを押してくれたらくれたら<br><u>今日の残業時間</u>が返ってくるよ( ^^) <br>
+    残業時間が0分だったらいいね!(^^)!<br>    
+    <br>
+    <input type="text" class="omikujinumber" id="normalomikuji4">
+    <p><button onclick="omikujiforsocialperson4()" class="omikujibutton4">今日の残業時間を占う</button></p>        
+    <br>
+    <br>
+    <text class="omikuji">おみくじ⓹</text><br>    
+   <text class="additional-title">社会人のためのおみくじをもう一つ用意したよ( ´∀｀ )<br>
+    空欄の数字(<strong>実数値</strong>)の入力の仕方はおみくじ⓷と一緒だよ(^^)<br>
+    空欄に数字（<strong>実数値</strong>）を入力して「今年の給料を占う」ボタンを押してくれたらくれたら<br><u>今年の給料</u>が返ってくるよ( ^^) <br>
+    前年+100万円が出たらいいね!(^^)!<br>    
+    <br>
+    <input type="text" class="omikujinumber" id="normalomikuji5">
+    <p><button onclick="omikujiforsocialperson5()" class="omikujibutton3">今年の給料を占う</button></p>            
+</text>
+</body>
+</html>
