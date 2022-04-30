@@ -9,11 +9,12 @@
     <body>
         <h1>Blog Name</h1>
         <p class="edit">[<a href="/posts/{{ $post->id }}/edit">edit</a>]</p>
-        <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post" style="display:inline">
+        <form action="/posts/{{ $post->id }}" id="form_delete" method="post" style="display:inline">
     @csrf
     @method('DELETE')
-    <button type="submit" onclick="deletebutton()" class="buttonfordeleting">delete</button> 
-</form>
+    <input type="submit" style="display:none">
+    [<span onclick="deletebutton4()" class="buttonfordeleting">削除</span>]
+        </form>   
                 <div class='post'>
                     <h2 class='title'>{{ $post->title }}</h2>
                     <p class='body'>{{ $post->body }}</p>
@@ -21,9 +22,14 @@
                 </div>
                 <div class='back'>[<a href='/'>back</a>]</div>
     <script>
-        function deletebutton(){
-            if(confirm("本当に削除しますか？")){
-                document.getElementById("form_{{ $post->id }}").submit
+        function deletebutton4(){
+            var question=confirm('本当に削除しますか？')
+            if(question==true){
+                alert("deleted");
+                document.getElementById("form_delete").submit();
+            }
+            else{
+                alert("Be Careful!")
             }
         }
     </script>
