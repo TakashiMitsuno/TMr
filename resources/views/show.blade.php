@@ -21,6 +21,7 @@
                     <p class='updated_at'>{{$post->updated_at}}</p>
                 </div>
                 <div class='back'>[<a href='/'>back</a>]</div>
+                <a href="">{{ $post->category->name }}</a>
     <script>
         function deletebutton4(){
             var question=confirm('本当に削除しますか？')
