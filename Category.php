@@ -1,28 +1,23 @@
 <?php
 
-namespace App;
+namespace App\Category;
 
 use Illuminate\Database\Eloquent\Model;
-
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Category;
 class Post extends Model
 {use SoftDeletes;
     
     protected $fillable = [
     'title',
     'body',
-    'category_id'
 ];
 public function getPaginateByLimit(int $limit_count = 10)
 {
-return $this::with('category')->orderBy('updated_at', 'DESC')->paginate($limit_count);
+    return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
 }
-public function category()
+public function posts()   
 {
-    return $this->belongsTo('App\Category');
+    return $this->hasMany('App\Post');  
 }
-
-
 }
 ?>
