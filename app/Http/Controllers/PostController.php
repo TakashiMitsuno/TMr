@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+
 use App\Http\Requests\PostRequest; 
 use App\Category;// useする
 
@@ -44,6 +45,7 @@ public function delete(Post $post)
 {
     $post->delete();
     return redirect('/');
+
 }
 }
 ?>
