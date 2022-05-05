@@ -26,9 +26,6 @@
     </select>
         </form>
         <div class="back">[<a href="/">back</a>]</div>
-        <div class="category">
-    <h2>Category</h2>
-    
-</div>
+
     </body>
 </html>
