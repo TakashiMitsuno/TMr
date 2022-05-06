@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Category;
 class Post extends Model
@@ -21,6 +22,7 @@ public function category()
 {
     return $this->belongsTo('App\Category');
 }
+
 
 }
 ?>

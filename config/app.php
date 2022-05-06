@@ -67,13 +67,16 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'timezone' => 'Asia/Tokyo',
+=======
+   'Asia/Tokyo' => 'UTC',
+>>>>>>> ad097771ad6b537bcc9b5ffeaff3bba32590768b
 
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
-    |--------------------------------------------------------------------------
-    |
+    |--------------------------------------------------------------------------   |
     | The application locale determines the default locale that will be used
     | by the translation service provider. You are free to set this value
     | to any of the locales which will be supported by the application.
