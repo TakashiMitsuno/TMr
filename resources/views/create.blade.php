@@ -3,9 +3,21 @@
     <head>
         <meta charset="utf-8">
         <title>Blog</title>
+        <style type="text/css">
+        .Welcome{
+        heigtt:60px;
+        width:300px;
+        background-color:pink;
+        </style>
     </head>
+@extends('layouts.app')
+
+@section('content')    
     <body>
-        <h1>Blog Name</h1>
+<h4 class="Welcome">{{Auth::user()->name}}様Blogへようこそ!</h4>          
+        <h1>Blog</h1>
+        <br>
+        <br>
         <form action="/posts" method="POST">
             @csrf
             <div class="title">
@@ -29,3 +41,4 @@
 
     </body>
 </html>
+@endsection

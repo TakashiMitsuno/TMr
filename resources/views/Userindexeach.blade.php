@@ -23,30 +23,23 @@
 <h4 class="Welcome">{{Auth::user()->name}}様Blogへようこそ!</h4>       
         <h1>Blog</h1>
         <button type="button" class="createbutton"  onclick="location.href='/posts/create'">create</button>     
- <p><button type="button" onclick="location.href='/users'">{{Auth::user()->name}}様の投稿ブログの確認</button></p>
-       
-         <br>
-         <br>
-        <div class='posts'>
-            @foreach ($posts as $post)
-                <div class='post'>
-                    <a href='/posts/{{$post->id}}'><h2 class='title'>{{ $post->title }}</h2></a>
-                    <p class='body'>{{ $post->body }}</p>
-                <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
-
-                </div>
-        <p><a href="/users/{{$post->user->id}}">{{ $post->user->name }}</a>様により<u>{{ $post->created_at }}</u>に作成されました</p>
-            @endforeach
-        </div>
+<div class="own_posts">
+        @foreach($own_post as $post)
+            <div>
+                <h4><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h4>
+               <p>{{ $post->body }}</p> 
+            <p><a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a></p>       
+     <p><a href="/users/{{$post->user->id}}">{{ $post->user->name }}</a>様により<u>{{ $post->created_at }}</u>に作成されました</p>
+            </div>
+        @endforeach
+   
         <div class='paginate'>
-            {{ $posts->links() }}
+            {{ $own_post->links() }}
         </div>
         
-
-    
-    <div>
-        <a href='/teratail'>teratail質問一覧へ</a>
+        <div class='back'>[<a href='/'>back</a>]</div>
     </div>
+
     </body>
 </html>
 @endsection  
