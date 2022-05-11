@@ -4,15 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Blog</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-
-        
+        <style type="text/css">
+        .Welcome{
+        heigtt:60px;
+        width:300px;
+        background-color:pink;
+        </style>
     </head>
+@extends('layouts.app')
+
+@section('content')    
     <body>
-       <h1 class="title">編集画面</h1>
+<h4 class="Welcome">{{Auth::user()->name}}様Blogへようこそ!</h4>       
+<h1>Blog</h1>
+<br>
+<br>
+       <h2 class="title">編集画面</h1>
+       <br>
+       <br>
     <div class="content">
         <form action="/posts/{{ $post->id }}" method="POST">
             @csrf
@@ -30,3 +43,4 @@
     </div>
     </body>
 </html>
+@endsection
